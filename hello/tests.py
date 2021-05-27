@@ -10,7 +10,6 @@ class HomePageViewTestCase(SimpleTestCase):
 
     def test_request_home_page(self):
         response = self.client.get('/')
-
         # Check that the response is 200 OK.
         self.assertEqual(response.status_code, 200)
 
