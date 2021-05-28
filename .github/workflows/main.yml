@@ -26,11 +26,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Test with pytest
-      run: |
-        pip install pytest
-        pip install pytest-cov
-        pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html     
+    - name: Django Test CI
+      # You may pin to the exact commit or the version.
+      # uses: UKnowWhoIm/django-test-action@6d8e2de46b5da6007106ebe443de99416ec238d0
+      uses: UKnowWhoIm/django-test-action@v0.6.1
       env:	
         CI: true	
     - name: 'Deploy to Production'	
