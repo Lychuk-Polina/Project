@@ -31,7 +31,7 @@ jobs:
       # uses: UKnowWhoIm/django-test-action@6d8e2de46b5da6007106ebe443de99416ec238d0
       uses: UKnowWhoIm/django-test-action@v0.6.1
       with:
-        settings-dir-path: "Project"
+        settings-dir-path: "requirements.txt"
       env:	
         CI: true	
     - name: 'Deploy to Production'	
