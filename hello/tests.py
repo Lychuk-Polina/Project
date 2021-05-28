@@ -12,5 +12,3 @@ class HomePageViewTestCase(SimpleTestCase):
         response = self.client.get('/')
         # Check that the response is 200 OK.
         self.assertEqual(response.status_code, 200)
-
-        self.assertContains(response, 'Hello world!',count=None, status_code=200, msg_prefix='', html=False)
